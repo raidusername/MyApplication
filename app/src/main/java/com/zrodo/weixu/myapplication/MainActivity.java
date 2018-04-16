@@ -100,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "添加成功", Toast.LENGTH_LONG).show();
                 //显示跳转
                 Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+                intent.putExtra("data","这是一个跳转贷数据的测试");
                 startActivity(intent);
 
                 break;
@@ -124,6 +125,9 @@ public class MainActivity extends AppCompatActivity {
                     }
                     Toast.makeText(MainActivity.this, "退出", Toast.LENGTH_LONG).show();
                     //隐式跳转
+                    // Intent intent = new Intent(Intent.ACTION_DIAL);
+                    //intent.setData(Uri.parse("tel:10086"));
+
                     Intent intent1 = new Intent();
                     intent1.setAction(MediaStore.ACTION_IMAGE_CAPTURE);
                     //根据路径实例化图片文件

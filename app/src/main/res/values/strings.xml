@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">斗破苍穹</string>
+    <string name="user_info">检测师信息</string>
+    <string name="Slaughterhouse_info">屠宰场信息</string>
 </resources>

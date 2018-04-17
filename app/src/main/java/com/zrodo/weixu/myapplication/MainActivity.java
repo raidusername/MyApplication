@@ -99,10 +99,14 @@ public class MainActivity extends BaseAvtivitty {
         switch (item.getItemId()) {
             case R.id.additem:
                 Toast.makeText(MainActivity.this, "添加成功", Toast.LENGTH_LONG).show();
-                //显示跳转
-                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
-                intent.putExtra("data", "这是一个跳转贷数据的测试");
-                startActivity(intent);
+                /**
+                 *   //显示跳转
+                 Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+                 intent.putExtra("data", "这是一个跳转贷数据的测试");
+                 startActivity(intent);
+
+                 * */
+                Main2Activity.Actiononstart(MainActivity.this,"这是跳转数据");
 
                 break;
             case R.id.removeitem:

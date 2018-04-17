@@ -21,7 +21,7 @@ import android.widget.Toast;
 import java.io.File;
 import java.io.IOException;
 
-public class MainActivity extends BaseAvtivitty {
+public class MainActivity extends BaseAvtivitty  {
     public static final int REQUEST_TAKE_PHOTO_CODE = 1;
     public static final int REQUST_TAKE_PHOTTO_CODE2 = 2;
     private Button btnone;

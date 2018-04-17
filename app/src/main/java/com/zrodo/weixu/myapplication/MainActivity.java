@@ -8,7 +8,6 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -44,6 +43,7 @@ public class MainActivity extends BaseAvtivitty {
                 Toast.makeText(MainActivity.this, "关闭", Toast.LENGTH_LONG).show();
                 ActivityCollector.finishAllActivity();
 
+
             }
         });
 
@@ -56,7 +56,7 @@ public class MainActivity extends BaseAvtivitty {
     }
 
     /*
-    * 初始化
+    * 初始化绑定控件
     * **/
     public void init() {
         btnone = (Button) findViewById(R.id.btnone);
@@ -101,7 +101,7 @@ public class MainActivity extends BaseAvtivitty {
                 Toast.makeText(MainActivity.this, "添加成功", Toast.LENGTH_LONG).show();
                 //显示跳转
                 Intent intent = new Intent(MainActivity.this, Main2Activity.class);
-                intent.putExtra("data","这是一个跳转贷数据的测试");
+                intent.putExtra("data", "这是一个跳转贷数据的测试");
                 startActivity(intent);
 
                 break;

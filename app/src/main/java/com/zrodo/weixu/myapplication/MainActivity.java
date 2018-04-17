@@ -1,14 +1,18 @@
 package com.zrodo.weixu.myapplication;
 
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,7 +25,7 @@ import android.widget.Toast;
 import java.io.File;
 import java.io.IOException;
 
-public class MainActivity extends BaseAvtivitty  {
+public class MainActivity extends BaseAvtivitty {
     public static final int REQUEST_TAKE_PHOTO_CODE = 1;
     public static final int REQUST_TAKE_PHOTTO_CODE2 = 2;
     private Button btnone;
@@ -37,6 +41,10 @@ public class MainActivity extends BaseAvtivitty  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            requestPermissions(new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_TAKE_PHOTO_CODE
+            );
+        }
         btnone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -94,6 +102,20 @@ public class MainActivity extends BaseAvtivitty  {
         }
     }
 
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == 1) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Log.d("permission", "获取成功");
+            } else {
+                Log.d("permission", "权限悲剧");
+            }
+
+        }
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -106,7 +128,7 @@ public class MainActivity extends BaseAvtivitty  {
                  startActivity(intent);
 
                  * */
-                Main2Activity.Actiononstart(MainActivity.this,"这是跳转数据");
+                Main2Activity.Actiononstart(MainActivity.this, "这是跳转数据");
 
                 break;
             case R.id.removeitem:
@@ -140,6 +162,7 @@ public class MainActivity extends BaseAvtivitty  {
                     //设置拍照后图片保存到文件中
                     intent1.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(photoFile));
                     //启动拍照activity并获取返回数据
+
                     startActivityForResult(intent1, REQUEST_TAKE_PHOTO_CODE);
                     //finish();
                 } else {

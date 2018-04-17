@@ -11,3 +11,6 @@
 
             }
         });
+
+
+问题：: Bitmap too large to be uploaded into a texture (3120x4160, max=4096x4096)

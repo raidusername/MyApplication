@@ -22,7 +22,7 @@ import android.widget.Toast;
 import java.io.File;
 import java.io.IOException;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseAvtivitty {
     public static final int REQUEST_TAKE_PHOTO_CODE = 1;
     public static final int REQUST_TAKE_PHOTTO_CODE2 = 2;
     private Button btnone;
@@ -41,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
         btnone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "点击第一次", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "关闭", Toast.LENGTH_LONG).show();
+                ActivityCollector.finishAllActivity();
 
             }
         });

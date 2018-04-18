@@ -14,3 +14,8 @@
 
 
 问题：: Bitmap too large to be uploaded into a texture (3120x4160, max=4096x4096)
+解决方法
+BitmapFactory.Options options = new BitmapFactory.Options();
+                options.inSampleSize = 64;
+                Bitmap bitmap = BitmapFactory.decodeFile(file.getPath(),options);
+                imageView.setImageBitmap(bitmap);

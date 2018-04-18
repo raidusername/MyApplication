@@ -22,6 +22,9 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.zrodo.weixu.myapplication.java.ActivityCollector;
+import com.zrodo.weixu.myapplication.java.BaseAvtivitty;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -79,10 +82,14 @@ public class MainActivity extends BaseAvtivitty {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_TAKE_PHOTO_CODE && resultCode == Activity.RESULT_OK) {
             File photoFile = new File(photoPath);
+            BitmapFactory.Options options=new BitmapFactory.Options();
+            options.inSampleSize = 16 ;
+
             if (photoFile.exists()) {
                 //通过图片地址将图片加载到bitmap里面
-                Bitmap bm = BitmapFactory.decodeFile(photoFile.getAbsolutePath());
+                Bitmap bm = BitmapFactory.decodeFile(photoFile.getAbsolutePath(),options);
                 //将拍摄的照片显示到界面上
+
                 imageView.setVisibility(View.VISIBLE);
                 imageView.setImageBitmap(bm);
             } else {

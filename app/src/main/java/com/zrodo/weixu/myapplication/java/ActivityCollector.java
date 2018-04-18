@@ -1,4 +1,4 @@
-package com.zrodo.weixu.myapplication;
+package com.zrodo.weixu.myapplication.java;
 
 import android.app.Activity;
 import android.util.Log;

@@ -1,8 +1,10 @@
-package com.zrodo.weixu.myapplication;
+package com.zrodo.weixu.myapplication.java;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+
+import com.zrodo.weixu.myapplication.java.ActivityCollector;
 
 /**
  * Created by td on 2018/4/17.

@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.zrodo.weixu.myapplication.java.TitleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/list_text"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -17,32 +14,10 @@
             android:text="@string/user_info" />
 
         <ImageButton
+            android:id="@+id/list_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
             android:src="@mipmap/ic_launcher" />
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="@string/p_num"/>
-        <TextView
-            android:id="@+id/list_pnum"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-           android:layout_weight="1" />
-        <TextView
-            android:id="@+id/list_time"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="2018年4月16日 13:53:57"
-           />
-
-    </LinearLayout>
-</com.zrodo.weixu.myapplication.java.TitleLayout>
+</LinearLayout>

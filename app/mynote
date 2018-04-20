@@ -19,3 +19,7 @@ BitmapFactory.Options options = new BitmapFactory.Options();
                 options.inSampleSize = 64;
                 Bitmap bitmap = BitmapFactory.decodeFile(file.getPath(),options);
                 imageView.setImageBitmap(bitmap);
+
+
+
+适配器回头再看 listview     和recyclerview

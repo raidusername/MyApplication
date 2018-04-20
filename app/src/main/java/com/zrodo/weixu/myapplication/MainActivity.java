@@ -24,6 +24,7 @@ import android.widget.Toast;
 
 import com.zrodo.weixu.myapplication.java.ActivityCollector;
 import com.zrodo.weixu.myapplication.java.BaseAvtivitty;
+import com.zrodo.weixu.myapplication.java.Bitmapphoto;
 
 import java.io.File;
 import java.io.IOException;
@@ -82,12 +83,11 @@ public class MainActivity extends BaseAvtivitty {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_TAKE_PHOTO_CODE && resultCode == Activity.RESULT_OK) {
             File photoFile = new File(photoPath);
-            BitmapFactory.Options options=new BitmapFactory.Options();
-            options.inSampleSize = 16 ;
+
 
             if (photoFile.exists()) {
-                //通过图片地址将图片加载到bitmap里面
-                Bitmap bm = BitmapFactory.decodeFile(photoFile.getAbsolutePath(),options);
+                //缩略图
+                Bitmap bm = Bitmapphoto.bitmap(photoFile);
                 //将拍摄的照片显示到界面上
 
                 imageView.setVisibility(View.VISIBLE);
@@ -135,7 +135,7 @@ public class MainActivity extends BaseAvtivitty {
                  startActivity(intent);
 
                  * */
-                Main2Activity.Actiononstart(MainActivity.this, "这是跳转数据");
+                Main2Activity.Actiononstart(MainActivity.this, "跳转过来显示listview");
 
                 break;
             case R.id.removeitem:

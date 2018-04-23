@@ -23,3 +23,15 @@ BitmapFactory.Options options = new BitmapFactory.Options();
 
 
 适配器回头再看 listview     和recyclerview
+listview setonitemclick   中有button如何避免失焦
+ListView点击事件失效解决方法：
+
+一般出现这个情况，就是你的item里面有按钮的点击事件，你的item里面有button控件，button控件是抢占焦点的，只要在你的item布局里面这样子写就可以了：
+                   <Button
+                    android:layout_width="140px"
+                    android:layout_height="56px"
+                    android:text="按钮"
+                    android:textSize="28px"
+                    android:focusable="false"
+                    android:textColor="@color/white"/>
+注意： android:focusable=”false”只要加上这句话，就可以避免了抢占焦点事件

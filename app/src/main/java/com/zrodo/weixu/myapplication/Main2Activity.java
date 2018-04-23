@@ -1,16 +1,18 @@
 package com.zrodo.weixu.myapplication;
 
-import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.zrodo.weixu.myapplication.java.BaseAdapter;
 import com.zrodo.weixu.myapplication.java.BaseAvtivitty;
-import com.zrodo.weixu.myapplication.java.Beanadapter;
+import com.zrodo.weixu.myapplication.java.Bean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +21,7 @@ public class Main2Activity extends BaseAvtivitty {
     private TextView textView2;
     private String data1[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "11", "12", "123"};
     private ListView listView;
-    private List<Beanadapter> list;
+    private List<Bean> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,15 +44,22 @@ public class Main2Activity extends BaseAvtivitty {
         BaseAdapter baseAdapter=new BaseAdapter(Main2Activity.this,R.layout.list_layout);
         baseAdapter.addAll(list);
         listView.setAdapter(baseAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Bean bean =list.get(position);
+                Toast.makeText(Main2Activity.this, bean.getName(),Toast.LENGTH_LONG).show();
+            }
+        });
 
 
     }
 public void inilist(){
 
         for (int i=0;i<=11;i++){
-            Beanadapter beanadapter=new Beanadapter(R.mipmap.ic_launcher,data1[i]);
+            Bean bean =new Bean(R.mipmap.ic_launcher,data1[i]);
 
-            list.add(beanadapter);
+            list.add(bean);
 
     }
 }
@@ -61,4 +70,6 @@ public void inilist(){
         context.startActivity(intent);
 
     }
+
+
 }

@@ -4,11 +4,11 @@ package com.zrodo.weixu.myapplication.java;
  * Created by td on 2018/4/19.
  */
 
-public class Beanadapter {
+public class Bean {
     private  int imgid;
     private String name;
 
-    public Beanadapter(int imgid, String name) {
+    public Bean(int imgid, String name) {
         this.imgid = imgid;
         this.name = name;
     }

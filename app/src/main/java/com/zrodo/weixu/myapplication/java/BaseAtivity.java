@@ -10,7 +10,7 @@ import com.zrodo.weixu.myapplication.java.ActivityCollector;
  * Created by td on 2018/4/17.
  */
 
-public class BaseAvtivitty extends AppCompatActivity {
+public class BaseAtivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

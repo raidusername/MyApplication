@@ -6,7 +6,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
@@ -23,13 +22,13 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.zrodo.weixu.myapplication.java.ActivityCollector;
-import com.zrodo.weixu.myapplication.java.BaseAvtivitty;
+import com.zrodo.weixu.myapplication.java.BaseAtivity;
 import com.zrodo.weixu.myapplication.java.Bitmapphoto;
 
 import java.io.File;
 import java.io.IOException;
 
-public class MainActivity extends BaseAvtivitty {
+public class MainActivity extends BaseAtivity {
     public static final int REQUEST_TAKE_PHOTO_CODE = 1;
     public static final int REQUST_TAKE_PHOTTO_CODE2 = 2;
     private Button btnone;

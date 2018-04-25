@@ -17,11 +17,11 @@ import com.zrodo.weixu.myapplication.R;
  * Created by td on 2018/4/18.
  */
 
-public class BaseAdapter extends ArrayAdapter<Bean> {
+public class Adapter2 extends ArrayAdapter<Bean> {
 
     private int viewResourceId;
 
-    public BaseAdapter(Context context, int resource) {
+    public Adapter2(Context context, int resource) {
         super(context, resource);
         this.viewResourceId = resource;
     }

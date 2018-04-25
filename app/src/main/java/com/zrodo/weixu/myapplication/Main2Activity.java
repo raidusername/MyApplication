@@ -3,21 +3,20 @@ package com.zrodo.weixu.myapplication;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.zrodo.weixu.myapplication.java.BaseAdapter;
-import com.zrodo.weixu.myapplication.java.BaseAvtivitty;
+import com.zrodo.weixu.myapplication.java.Adapter2;
+import com.zrodo.weixu.myapplication.java.BaseAtivity;
 import com.zrodo.weixu.myapplication.java.Bean;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main2Activity extends BaseAvtivitty {
+public class Main2Activity extends BaseAtivity {
     private TextView textView2;
     private String data1[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "11", "12", "123"};
     private ListView listView;
@@ -35,19 +34,22 @@ public class Main2Activity extends BaseAvtivitty {
 
         textView2 = (TextView) findViewById(R.id.text2);
         listView = (ListView) findViewById(R.id.list_info);
-        Intent intent = getIntent();
+        final Intent intent = getIntent();
         list=new ArrayList<>();
         String data = intent.getStringExtra("param1");
         textView2.setText(data);
         inilist();
         //ArrayAdapter<String> adapter = new ArrayAdapter<String>(Main2Activity.this, android.R.layout.simple_list_item_1, data1);
-        BaseAdapter baseAdapter=new BaseAdapter(Main2Activity.this,R.layout.list_layout);
-        baseAdapter.addAll(list);
-        listView.setAdapter(baseAdapter);
+        Adapter2 adapter2 =new Adapter2(Main2Activity.this,R.layout.list_layout);
+        adapter2.addAll(list);
+        listView.setAdapter(adapter2);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Bean bean =list.get(position);
+                Intent intent1=new Intent(Main2Activity.this,Main3Activity.class);
+                intent.putExtra("name",bean.getName());
+                startActivity(intent1);
                 Toast.makeText(Main2Activity.this, bean.getName(),Toast.LENGTH_LONG).show();
             }
         });

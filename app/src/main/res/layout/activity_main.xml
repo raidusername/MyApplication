@@ -11,13 +11,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="主角篇" />
+        android:text="主" />
 
     <Button
         android:id="@+id/btnone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="这是一个按钮" />
+        android:text="退出" />
 
     <ImageView
         android:id="@+id/img"

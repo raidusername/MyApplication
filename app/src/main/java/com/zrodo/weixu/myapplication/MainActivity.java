@@ -51,7 +51,7 @@ public class MainActivity extends BaseAtivity {
         btnone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "关闭", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Finish", Toast.LENGTH_LONG).show();
                 ActivityCollector.finishAllActivity();
 
 
@@ -60,6 +60,7 @@ public class MainActivity extends BaseAtivity {
 
     }
 
+    //右上角选项
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.mymain, menu);
@@ -156,7 +157,7 @@ public class MainActivity extends BaseAtivity {
                             e.printStackTrace();
                         }
                     }
-                    Toast.makeText(MainActivity.this, "退出", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "Take A Photo", Toast.LENGTH_LONG).show();
                     //隐式跳转
                     // Intent intent = new Intent(Intent.ACTION_DIAL);
                     //intent.setData(Uri.parse("tel:10086"));

@@ -18,7 +18,8 @@ import java.util.List;
 
 public class Main2Activity extends BaseAtivity {
     private TextView textView2;
-    private String data1[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "11", "12", "123"};
+    private String data1[] = {"苹果", "香蕉", "樱桃", "葡萄", "芒果", "橘子", "水果li", "菠萝", "草莓", "西瓜"};
+    private int fruits[]={R.mipmap.apple_pic,R.mipmap.banana_pic,R.mipmap.cherry_pic,R.mipmap.grape_pic,R.mipmap.mango_pic,R.mipmap.orange_pic,R.mipmap.pear_pic,R.mipmap.pineapple_pic,R.mipmap.strawberry_pic,R.mipmap.watermelon_pic};
     private ListView listView;
     private List<Bean> list;
 
@@ -58,8 +59,8 @@ public class Main2Activity extends BaseAtivity {
     }
 public void inilist(){
 
-        for (int i=0;i<=11;i++){
-            Bean bean =new Bean(R.mipmap.ic_launcher,data1[i]);
+        for (int i=0;i<=9;i++){
+            Bean bean =new Bean(fruits[i],data1[i]);
 
             list.add(bean);
 

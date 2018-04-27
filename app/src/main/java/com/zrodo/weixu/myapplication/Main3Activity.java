@@ -15,7 +15,8 @@ import java.util.List;
 
 public class Main3Activity extends AppCompatActivity {
     private RecyclerView recyclerView;
-    private String data1[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "11", "12", "123"};
+    private String data1[] = {"苹果", "香蕉", "樱桃", "葡萄", "芒果", "橘子", "水果li", "菠萝", "草莓", "西瓜"};
+   private int fruits[]={R.mipmap.apple_pic,R.mipmap.banana_pic,R.mipmap.cherry_pic,R.mipmap.grape_pic,R.mipmap.mango_pic,R.mipmap.orange_pic,R.mipmap.pear_pic,R.mipmap.pineapple_pic,R.mipmap.strawberry_pic,R.mipmap.watermelon_pic};
     private List<Bean> list;
 
     @Override
@@ -36,8 +37,8 @@ public class Main3Activity extends AppCompatActivity {
 
     public void inilist() {
 
-        for (int i = 0; i <= 12; i++) {
-            Bean bean = new Bean(R.mipmap.ic_launcher, data1[i]);
+        for (int i = 0; i <= 9; i++) {
+            Bean bean = new Bean(fruits[i], data1[i]);
             Log.d("Bean", bean.getName());
 
             list.add(bean);

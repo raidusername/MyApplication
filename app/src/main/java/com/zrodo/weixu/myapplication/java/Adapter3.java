@@ -1,6 +1,7 @@
 package com.zrodo.weixu.myapplication.java;
 
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.zrodo.weixu.myapplication.Main4Activity;
 import com.zrodo.weixu.myapplication.R;
 
 import java.util.List;
@@ -40,8 +42,15 @@ private List<Bean> Beanlist;
             @Override
             public void onClick(View view) {
                 int postion=viewHold.getAdapterPosition();
-                Bean bean=Beanlist.get(postion);
-                Toast.makeText(view.getContext(), bean.getImgid(),Toast.LENGTH_LONG).show();
+                if(postion==0){
+                    Intent intent=new Intent(view.getContext(), Main4Activity.class);
+                    view.getContext().startActivity(intent);
+
+                }else{
+                    Bean bean=Beanlist.get(postion);
+                    Toast.makeText(view.getContext(), bean.getImgid(),Toast.LENGTH_LONG).show();
+                }
+
             }
         });
         return viewHold;

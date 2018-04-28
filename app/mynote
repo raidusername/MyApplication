@@ -35,3 +35,9 @@ ListView点击事件失效解决方法：
                     android:focusable="false"
                     android:textColor="@color/white"/>
 注意： android:focusable=”false”只要加上这句话，就可以避免了抢占焦点事件
+
+
+
+当LinearLayout设置 android:orientation="vertical" 的时候，竖直即vertical方向上，android:layout_gravity="bottom" 是无效的，只有左右left和right有效果。
+
+同理，当设置 android:orientation="horizontal" ，水平方向的设置都是无效的，只有top和bottom设置有效果。

@@ -41,3 +41,34 @@ ListView点击事件失效解决方法：
 当LinearLayout设置 android:orientation="vertical" 的时候，竖直即vertical方向上，android:layout_gravity="bottom" 是无效的，只有左右left和right有效果。
 
 同理，当设置 android:orientation="horizontal" ，水平方向的设置都是无效的，只有top和bottom设置有效果。
+
+动态添加Fragment 使用的是Framelayout 静态添加使用的是fragment
+           <FrameLayout
+          android:id="@+id/right_fragment"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1" />
+
+              <fragment
+                  android:id="@+id/left_fragment"
+                  android:name="com.zrodo.weixu.fragmenttest.java.LeftFragment"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1" />
+
+双页模式使用限定符（手上没有平板，暂时无法实现）
+large  是一个限定符 如果屏幕被认为是large的设备就会自动加载layout-large 文件夹下面的布局文件
+屏幕特征	限定符	描述
+大小	samall	提供给小屏幕适配的资源(小于3英寸)
+大小	normal	提供给中等屏幕设备的资源小于4英寸左右
+大小	large	提供给大屏幕设备的资源4英寸-7英寸
+大小	xlarge	提供给超大屏幕设备的资源(7-10英寸
+分辨率	ldpi	低分辨率设备（120dpi一下）
+分辨率	mdpi	中等（120dpi一160dpi）
+分辨率	hdpi	高（160dpi一240dpi）
+分辨率	xhdpi	超高（240dpi一320dpi）
+分辨率	xxhdpi	超超高（320dpi一480dpi）
+分辨率	xxxhdpi	超超超高480dpi以上,一般都是640dpi
+方向	land	横屏
+方向	port	竖屏
+分辨率	sw***dp	大于*宽度加载此资源

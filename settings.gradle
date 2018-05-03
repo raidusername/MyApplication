@@ -1,1 +1,1 @@
-include ':app', ':fragmenttest', ':simpleNews'
+include ':app', ':fragmenttest', ':simpleNews', ':broadcastTest', ':broadtest2', ':broadcastdownline'

@@ -20,7 +20,7 @@ import java.util.List;
 
 public class NewTitleFragment extends Fragment {
     private View view;
-//   private boolean isTWO;
+ private boolean isTWO;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -44,15 +44,15 @@ public class NewTitleFragment extends Fragment {
         return list;
     }
 
-    //    @Override
-//    public void onActivityCreated( Bundle savedInstanceState) {
-//        super.onActivityCreated(savedInstanceState);
-//        if (getActivity().findViewById(R.id.news_content)!=null){
-//            isTWO=true;
-//        }else {
-//            isTWO=false;
-//        }
-//    }
+        @Override
+    public void onActivityCreated( Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        if (getActivity().findViewById(R.id.news_content)!=null){
+            isTWO=true;
+        }else {
+            isTWO=false;
+        }
+    }
     class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHold> {
         List<NewsBean> list;
 
@@ -65,12 +65,22 @@ public class NewTitleFragment extends Fragment {
         public ViewHold onCreateViewHolder(ViewGroup parent, int viewType) {
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_layout, parent, false);
             final ViewHold viewHold = new ViewHold(view);
+
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     NewsBean newsBean = list.get(viewHold.getAdapterPosition());
-                    Log.d("aaaa", newsBean.getTitle());
-                    BaseActivity.actionStrat(getActivity(), newsBean.getTitle(), newsBean.getContent());
+                    if (isTWO){
+                        //如果是双页模式
+                        New_Fragment new_fragment=(New_Fragment) getFragmentManager().findFragmentById(R.id.fragment_news_content);
+                        new_fragment.refresh(newsBean.getTitle(),newsBean.getContent());
+
+                    }else {
+                        //如果是单页模式
+                        Log.d("aaaa", newsBean.getTitle());
+                        BaseActivity.actionStrat(getActivity(), newsBean.getTitle(), newsBean.getContent());
+                    }
+
 
                 }
             });

@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/broadcastdownline/broadcastdownline.iml" filepath="$PROJECT_DIR$/broadcastdownline/broadcastdownline.iml" />
       <module fileurl="file://$PROJECT_DIR$/broadtest2/broadtest2.iml" filepath="$PROJECT_DIR$/broadtest2/broadtest2.iml" />
       <module fileurl="file://$PROJECT_DIR$/fragmenttest/fragmenttest.iml" filepath="$PROJECT_DIR$/fragmenttest/fragmenttest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/savedate/savedate.iml" filepath="$PROJECT_DIR$/savedate/savedate.iml" />
       <module fileurl="file://$PROJECT_DIR$/simpleNews/simpleNews.iml" filepath="$PROJECT_DIR$/simpleNews/simpleNews.iml" />
     </modules>
   </component>

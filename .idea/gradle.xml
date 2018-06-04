@@ -9,11 +9,20 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/baidutest" />
             <option value="$PROJECT_DIR$/broadcastTest" />
             <option value="$PROJECT_DIR$/broadcastdownline" />
             <option value="$PROJECT_DIR$/broadtest2" />
+            <option value="$PROJECT_DIR$/contentprovider" />
             <option value="$PROJECT_DIR$/fragmenttest" />
+            <option value="$PROJECT_DIR$/mythread" />
+            <option value="$PROJECT_DIR$/networktest" />
+            <option value="$PROJECT_DIR$/networktest2" />
+            <option value="$PROJECT_DIR$/noticationtest" />
+            <option value="$PROJECT_DIR$/runpermissiontest" />
             <option value="$PROJECT_DIR$/savedate" />
+            <option value="$PROJECT_DIR$/servicebestnum" />
+            <option value="$PROJECT_DIR$/servicetest" />
             <option value="$PROJECT_DIR$/simpleNews" />
           </set>
         </option>

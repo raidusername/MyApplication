@@ -80,3 +80,27 @@ large  是一个限定符 如果屏幕被认为是large的设备就会自动加�
 
 
 数据存储：文件存储， sharedpreference存储，数据库存储
+获取SharePerferences对象三种方法
+Context中getSharePerferences()方法
+Activity中getPerferences()方法
+PerferenceManager类中getDefaultSharePerferences()
+1、调用SharePerferences()对象中的edit()方法获取SharePerferences.Editor对象
+2、SharePerferences.Editor对象添加数据
+3、调用apply（）添加提交数据
+
+
+notifyDataSetChanged时列表数据没有刷新 适用对象：ArrayAdapter
+
+
+没有实现： 创建之际的contentProvider
+
+通知
+NotificationManager manager=(NotificationManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+Notification notification=new NotificationCompat(context).buuild();
+
+
+未完成： 解析xml
+
+
+异步处理线程
+主线程（handle）->重写（handlemessage：用于在主线程中处理发过来的message）

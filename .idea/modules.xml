@@ -4,11 +4,20 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MyApplication.iml" filepath="$PROJECT_DIR$/MyApplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/baidutest/baidutest.iml" filepath="$PROJECT_DIR$/baidutest/baidutest.iml" />
       <module fileurl="file://$PROJECT_DIR$/broadcastTest/broadcastTest.iml" filepath="$PROJECT_DIR$/broadcastTest/broadcastTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/broadcastdownline/broadcastdownline.iml" filepath="$PROJECT_DIR$/broadcastdownline/broadcastdownline.iml" />
       <module fileurl="file://$PROJECT_DIR$/broadtest2/broadtest2.iml" filepath="$PROJECT_DIR$/broadtest2/broadtest2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contentprovider/contentprovider.iml" filepath="$PROJECT_DIR$/contentprovider/contentprovider.iml" />
       <module fileurl="file://$PROJECT_DIR$/fragmenttest/fragmenttest.iml" filepath="$PROJECT_DIR$/fragmenttest/fragmenttest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mythread/mythread.iml" filepath="$PROJECT_DIR$/mythread/mythread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/networktest/networktest.iml" filepath="$PROJECT_DIR$/networktest/networktest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/networktest2/networktest2.iml" filepath="$PROJECT_DIR$/networktest2/networktest2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/noticationtest/noticationtest.iml" filepath="$PROJECT_DIR$/noticationtest/noticationtest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/runpermissiontest/runpermissiontest.iml" filepath="$PROJECT_DIR$/runpermissiontest/runpermissiontest.iml" />
       <module fileurl="file://$PROJECT_DIR$/savedate/savedate.iml" filepath="$PROJECT_DIR$/savedate/savedate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servicebestnum/servicebestnum.iml" filepath="$PROJECT_DIR$/servicebestnum/servicebestnum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servicetest/servicetest.iml" filepath="$PROJECT_DIR$/servicetest/servicetest.iml" />
       <module fileurl="file://$PROJECT_DIR$/simpleNews/simpleNews.iml" filepath="$PROJECT_DIR$/simpleNews/simpleNews.iml" />
     </modules>
   </component>

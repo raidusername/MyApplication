@@ -1,1 +1,1 @@
-include ':app', ':fragmenttest', ':simpleNews', ':broadcastTest', ':broadtest2', ':broadcastdownline', ':savedate'
+include ':app', ':fragmenttest', ':simpleNews', ':broadcastTest', ':broadtest2', ':broadcastdownline', ':savedate', ':contentprovider', ':runpermissiontest', ':noticationtest', ':networktest', ':networktest2', ':mythread', ':servicetest', ':servicebestnum', ':baidutest'

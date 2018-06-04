@@ -15,5 +15,14 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:text="保存数据"/>
-
+<Button
+    android:id="@+id/Shareperferennce_save"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Shareperferennce保存数据"/>
+  <Button
+      android:id="@+id/Shareperferennce_get"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Shareperferennce获取数据"/>
 </LinearLayout>
